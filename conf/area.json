@@ -1,0 +1,816 @@
+{
+  "area": [
+    {
+      "name": "九龍水塘",
+      "api": "kowloon-reservoir"
+    },
+    {
+      "name": "九龍城區",
+      "api": "kowloon-city"
+    },
+    {
+      "name": "九龍塘",
+      "api": "kowloon-tong"
+    },
+    {
+      "name": "九龍灣",
+      "api": "kowloon-bay"
+    },
+    {
+      "name": "八仙嶺",
+      "api": "pat-sin-leng"
+    },
+    {
+      "name": "上水",
+      "api": "sheung-shui"
+    },
+    {
+      "name": "上環",
+      "api": "sheung-wan"
+    },
+    {
+      "name": "土瓜灣",
+      "api": "to-kwa-wan"
+    },
+    {
+      "name": "大水坑",
+      "api": "tai-shui-hang"
+    },
+    {
+      "name": "大老山",
+      "api": "tate-cairn"
+    },
+    {
+      "name": "大坑",
+      "api": "tai-hang"
+    },
+    {
+      "name": "大尾篤",
+      "api": "tai-mei-tuk"
+    },
+    {
+      "name": "大角咀",
+      "api": "tai-kok-tsui"
+    },
+    {
+      "name": "大東山",
+      "api": "tai-tung-shan"
+    },
+    {
+      "name": "大埔區",
+      "api": "tai-po"
+    },
+    {
+      "name": "大埔滘",
+      "api": "tai-po-kau"
+    },
+    {
+      "name": "大埔墟",
+      "api": "tai-po-market"
+    },
+    {
+      "name": "大浪灣",
+      "api": "tai-long-wan"
+    },
+    {
+      "name": "大圍",
+      "api": "tai-wai"
+    },
+    {
+      "name": "大帽山",
+      "api": "tai-mo-shan"
+    },
+    {
+      "name": "大窩口",
+      "api": "tai-wo-hau"
+    },
+    {
+      "name": "大網仔",
+      "api": "tai-mong-tsai"
+    },
+    {
+      "name": "大潭水塘",
+      "api": "tai-tam-reservoirs"
+    },
+    {
+      "name": "大潭灣",
+      "api": "tai-tam-bay"
+    },
+    {
+      "name": "大澳",
+      "api": "tai-o"
+    },
+    {
+      "name": "大嶼山",
+      "api": "lantau-island"
+    },
+    {
+      "name": "大鵬灣",
+      "api": "tai-pang-wan"
+    },
+    {
+      "name": "大欖涌",
+      "api": "tai-lam-chung"
+    },
+    {
+      "name": "大欖涌水塘",
+      "api": "tai-lam-chung-reservoir"
+    },
+    {
+      "name": "小西灣",
+      "api": "siu-sai-wan"
+    },
+    {
+      "name": "小欖",
+      "api": "siu-lam"
+    },
+    {
+      "name": "中西區",
+      "api": "central-and-western"
+    },
+    {
+      "name": "中環",
+      "api": "central"
+    },
+    {
+      "name": "井欄樹",
+      "api": "tseng-lan-shue"
+    },
+    {
+      "name": "元朗區",
+      "api": "yuen-long"
+    },
+    {
+      "name": "分流",
+      "api": "fan-lau"
+    },
+    {
+      "name": "天水圍",
+      "api": "tin-shui-wai"
+    },
+    {
+      "name": "天后",
+      "api": "tin-hau"
+    },
+    {
+      "name": "太子",
+      "api": "prince-edward"
+    },
+    {
+      "name": "太古",
+      "api": "tai-koo"
+    },
+    {
+      "name": "太和",
+      "api": "tai-wo"
+    },
+    {
+      "name": "屯門區",
+      "api": "tuen-mun"
+    },
+    {
+      "name": "火炭",
+      "api": "fo-tan"
+    },
+    {
+      "name": "牛池灣",
+      "api": "ngau-chi-wan"
+    },
+    {
+      "name": "牛尾海",
+      "api": "ngau-mei-hoi"
+    },
+    {
+      "name": "牛頭角",
+      "api": "ngau-tau-kok"
+    },
+    {
+      "name": "北角",
+      "api": "north-point"
+    },
+    {
+      "name": "北區",
+      "api": "north"
+    },
+    {
+      "name": "北潭涌",
+      "api": "pak-tam-chung"
+    },
+    {
+      "name": "打鼓嶺",
+      "api": "ta-kwu-ling"
+    },
+    {
+      "name": "汀九",
+      "api": "ting-kau"
+    },
+    {
+      "name": "石門",
+      "api": "shek-mun"
+    },
+    {
+      "name": "石崗",
+      "api": "shek-kong"
+    },
+    {
+      "name": "石硤尾",
+      "api": "shek-kip-mei"
+    },
+    {
+      "name": "石塘咀",
+      "api": "shek-tong-tsui"
+    },
+    {
+      "name": "石壁",
+      "api": "shek-pik"
+    },
+    {
+      "name": "石壁水塘",
+      "api": "shek-pik-reservoir"
+    },
+    {
+      "name": "石澳",
+      "api": "shek-o"
+    },
+    {
+      "name": "企嶺下海",
+      "api": "kei-ling-ha-hoi"
+    },
+    {
+      "name": "兆康",
+      "api": "siu-hong"
+    },
+    {
+      "name": "吉澳洲",
+      "api": "crooked-island"
+    },
+    {
+      "name": "吐露港",
+      "api": "tolo-harbour"
+    },
+    {
+      "name": "尖沙咀",
+      "api": "tsim-sha-tsui"
+    },
+    {
+      "name": "尖東",
+      "api": "east-tsim-sha-tsui"
+    },
+    {
+      "name": "尖鼻咀",
+      "api": "tsim-bei-tsui"
+    },
+    {
+      "name": "西貢海",
+      "api": "sai-kung-hoi"
+    },
+    {
+      "name": "西貢區",
+      "api": "sai-kung"
+    },
+    {
+      "name": "西營盤",
+      "api": "sai-ying-pun"
+    },
+    {
+      "name": "西灣河",
+      "api": "sai-wan-ho"
+    },
+    {
+      "name": "何文田",
+      "api": "ho-man-tin"
+    },
+    {
+      "name": "佐敦",
+      "api": "jordan"
+    },
+    {
+      "name": "坑口",
+      "api": "hang-hau"
+    },
+    {
+      "name": "杏花村",
+      "api": "heng-fa-chuen"
+    },
+    {
+      "name": "沙田海",
+      "api": "sha-tin-hoi"
+    },
+    {
+      "name": "沙田區",
+      "api": "sha-tin"
+    },
+    {
+      "name": "沙田圍",
+      "api": "sha-tin-wai"
+    },
+    {
+      "name": "沙頭角",
+      "api": "sha-tau-kok"
+    },
+    {
+      "name": "貝澳",
+      "api": "pui-o"
+    },
+    {
+      "name": "赤門海峽",
+      "api": "tolo-channel"
+    },
+    {
+      "name": "赤柱",
+      "api": "stanley"
+    },
+    {
+      "name": "赤角",
+      "api": "chek-lap-kok"
+    },
+    {
+      "name": "京士柏",
+      "api": "king''s-park"
+    },
+    {
+      "name": "和合石",
+      "api": "wo-hop-shek"
+    },
+    {
+      "name": "坪洲",
+      "api": "peng-chau"
+    },
+    {
+      "name": "旺角",
+      "api": "mong-kok"
+    },
+    {
+      "name": "昂坪",
+      "api": "ngong-ping"
+    },
+    {
+      "name": "昂船洲",
+      "api": "ngong-suen-chau"
+    },
+    {
+      "name": "東平洲",
+      "api": "tung-ping-chau"
+    },
+    {
+      "name": "東涌",
+      "api": "tung-chung"
+    },
+    {
+      "name": "東區",
+      "api": "eastern"
+    },
+    {
+      "name": "東龍洲",
+      "api": "tung-lung-chau"
+    },
+    {
+      "name": "果洲群島",
+      "api": "kwo-chau-kwan-to"
+    },
+    {
+      "name": "林村",
+      "api": "lam-tsuen"
+    },
+    {
+      "name": "欣澳",
+      "api": "sunny-bay"
+    },
+    {
+      "name": "河背水塘",
+      "api": "ho-pui-reservoir"
+    },
+    {
+      "name": "油尖旺區",
+      "api": "yau-tsim-mong"
+    },
+    {
+      "name": "油麻地",
+      "api": "yau-ma-tei"
+    },
+    {
+      "name": "油塘",
+      "api": "yau-tong"
+    },
+    {
+      "name": "金鐘",
+      "api": "admiralty"
+    },
+    {
+      "name": "長沙灣",
+      "api": "cheung-sha-wan"
+    },
+    {
+      "name": "長洲",
+      "api": "cheung-chau"
+    },
+    {
+      "name": "青山",
+      "api": "tsing-shan"
+    },
+    {
+      "name": "青衣",
+      "api": "tsing-yi"
+    },
+    {
+      "name": "青龍頭",
+      "api": "tsing-lung-tau"
+    },
+    {
+      "name": "南丫島",
+      "api": "lamma-island"
+    },
+    {
+      "name": "南生圍",
+      "api": "nam-sang-wai"
+    },
+    {
+      "name": "南昌",
+      "api": "nam-cheong"
+    },
+    {
+      "name": "南朗山",
+      "api": "nam-long-shan"
+    },
+    {
+      "name": "南區",
+      "api": "southern"
+    },
+    {
+      "name": "城門水塘",
+      "api": "shing-mun-reservoir"
+    },
+    {
+      "name": "屏山",
+      "api": "ping-shan"
+    },
+    {
+      "name": "洪水橋",
+      "api": "hung-shui-kiu"
+    },
+    {
+      "name": "流浮山",
+      "api": "lau-fau-shan"
+    },
+    {
+      "name": "炮台山",
+      "api": "fortress-hill"
+    },
+    {
+      "name": "紅磡",
+      "api": "hung-hom"
+    },
+    {
+      "name": "美孚",
+      "api": "mei-foo"
+    },
+    {
+      "name": "飛鵝山",
+      "api": "kowloon-peak"
+    },
+    {
+      "name": "香港仔",
+      "api": "aberdeen"
+    },
+    {
+      "name": "香港仔下水塘",
+      "api": "aberdeen-lower-reservoir"
+    },
+    {
+      "name": "香港仔上水塘",
+      "api": "aberdeen-upper-reservoir"
+    },
+    {
+      "name": "香港黃金海岸",
+      "api": "hong-kong-gold-coast"
+    },
+    {
+      "name": "恒安",
+      "api": "heng-on"
+    },
+    {
+      "name": "柴灣",
+      "api": "chai-wan"
+    },
+    {
+      "name": "浪茄灣",
+      "api": "long-ke-wan"
+    },
+    {
+      "name": "海下",
+      "api": "hoi-ha"
+    },
+    {
+      "name": "烏蛟騰",
+      "api": "wu-kau-tang"
+    },
+    {
+      "name": "烏溪沙",
+      "api": "wu-kai-sha"
+    },
+    {
+      "name": "粉嶺",
+      "api": "fanling"
+    },
+    {
+      "name": "索罟群島",
+      "api": "soko-islands"
+    },
+    {
+      "name": "索罟灣",
+      "api": "sok-kwu-wan"
+    },
+    {
+      "name": "荔枝角",
+      "api": "lai-chi-kok"
+    },
+    {
+      "name": "荔景",
+      "api": "lai-king"
+    },
+    {
+      "name": "草山",
+      "api": "grassy-hill"
+    },
+    {
+      "name": "荃灣西",
+      "api": "tsuen-wan-west"
+    },
+    {
+      "name": "荃灣區",
+      "api": "tsuen-wan"
+    },
+    {
+      "name": "針山",
+      "api": "cham-shan"
+    },
+    {
+      "name": "馬料水",
+      "api": "ma-liu-shui"
+    },
+    {
+      "name": "馬鞍山",
+      "api": "ma-on-shan"
+    },
+    {
+      "name": "馬灣",
+      "api": "ma-wan"
+    },
+    {
+      "name": "堅尼地城",
+      "api": "kennedy-town"
+    },
+    {
+      "name": "將軍澳",
+      "api": "tseung-kwan-o"
+    },
+    {
+      "name": "彩虹",
+      "api": "choi-hung"
+    },
+    {
+      "name": "掃桿埔",
+      "api": "so-kon-po"
+    },
+    {
+      "name": "梅窩",
+      "api": "mui-wo"
+    },
+    {
+      "name": "清水灣",
+      "api": "clear-water-bay"
+    },
+    {
+      "name": "深井",
+      "api": "sham-tseng"
+    },
+    {
+      "name": "深水灣",
+      "api": "deep-water-bay"
+    },
+    {
+      "name": "深水區",
+      "api": "sham-shui-po"
+    },
+    {
+      "name": "深圳河",
+      "api": "shenzhen-river"
+    },
+    {
+      "name": "第一城",
+      "api": "city-one"
+    },
+    {
+      "name": "船灣淡水湖",
+      "api": "plover-cove-reservoir"
+    },
+    {
+      "name": "蚺蛇尖",
+      "api": "nam-she-tsim"
+    },
+    {
+      "name": "喜靈洲",
+      "api": "hei-ling-chau"
+    },
+    {
+      "name": "愉景灣",
+      "api": "discovery-bay"
+    },
+    {
+      "name": "筆架山",
+      "api": "pat-ka-shan"
+    },
+    {
+      "name": "黃大仙區",
+      "api": "wong-tai-sin"
+    },
+    {
+      "name": "黃石",
+      "api": "wong-shek"
+    },
+    {
+      "name": "黃竹坑",
+      "api": "wong-chuk-hang"
+    },
+    {
+      "name": "黃泥涌峽",
+      "api": "wong-nai-chung-gap"
+    },
+    {
+      "name": "塔門洲",
+      "api": "tap-mun-chau"
+    },
+    {
+      "name": "奧運",
+      "api": "olympic"
+    },
+    {
+      "name": "慈雲山",
+      "api": "tsz-wan-shan"
+    },
+    {
+      "name": "愛秩序灣",
+      "api": "aldrich-bay"
+    },
+    {
+      "name": "新蒲崗",
+      "api": "san-po-kong"
+    },
+    {
+      "name": "獅子山",
+      "api": "lion-rock"
+    },
+    {
+      "name": "萬宜水庫",
+      "api": "high-reservoir"
+    },
+    {
+      "name": "落馬洲",
+      "api": "island-lok-ma-chau"
+    },
+    {
+      "name": "葵芳",
+      "api": "kwai-fong"
+    },
+    {
+      "name": "葵青區",
+      "api": "kwai-tsing"
+    },
+    {
+      "name": "葵涌",
+      "api": "kwai-chung"
+    },
+    {
+      "name": "葵興",
+      "api": "kwai-hing"
+    },
+    {
+      "name": "滘西洲",
+      "api": "kau-sai-chau"
+    },
+    {
+      "name": "筲箕灣",
+      "api": "shau-kei-wan"
+    },
+    {
+      "name": "壽臣山",
+      "api": "shouson-hill"
+    },
+    {
+      "name": "榕樹灣",
+      "api": "yung-shue-wan"
+    },
+    {
+      "name": "維多利亞港",
+      "api": "victoria-harbour"
+    },
+    {
+      "name": "蒲台",
+      "api": "po-toi"
+    },
+    {
+      "name": "銅鑼灣",
+      "api": "causeway-bay"
+    },
+    {
+      "name": "鳳凰山",
+      "api": "fung-wong-shan"
+    },
+    {
+      "name": "魚涌",
+      "api": "quarry-bay"
+    },
+    {
+      "name": "摩星嶺",
+      "api": "mount-davis"
+    },
+    {
+      "name": "樂富",
+      "api": "lok-fu"
+    },
+    {
+      "name": "調景嶺",
+      "api": "tiu-keng-leng"
+    },
+    {
+      "name": "踏石角",
+      "api": "tap-shek-kok"
+    },
+    {
+      "name": "橋咀洲",
+      "api": "kiu-tsui-chau"
+    },
+    {
+      "name": "錦上路",
+      "api": "kam-sheung-road"
+    },
+    {
+      "name": "錦田",
+      "api": "kam-tin"
+    },
+    {
+      "name": "鴨洲",
+      "api": "ap-chau"
+    },
+    {
+      "name": "龍鼓灘",
+      "api": "lung-kwu-tan"
+    },
+    {
+      "name": "薄扶林",
+      "api": "pok-fu-lam"
+    },
+    {
+      "name": "薄扶林水塘",
+      "api": "pok-fu-lam-reservoir"
+    },
+    {
+      "name": "藍田",
+      "api": "lam-tin"
+    },
+    {
+      "name": "藍塘海峽",
+      "api": "lam-tong-hoi-hap"
+    },
+    {
+      "name": "離島",
+      "api": "outlying-island"
+    },
+    {
+      "name": "離島區",
+      "api": "islands"
+    },
+    {
+      "name": "鯉魚門",
+      "api": "lei-yue-mun"
+    },
+    {
+      "name": "寶林",
+      "api": "po-lam"
+    },
+    {
+      "name": "寶馬山",
+      "api": "braemar-hill"
+    },
+    {
+      "name": "鶴咀",
+      "api": "hok-tsui"
+    },
+    {
+      "name": "鰲磡石",
+      "api": "ngau-hom-shek"
+    },
+    {
+      "name": "灣仔區",
+      "api": "wan-chai"
+    },
+    {
+      "name": "觀塘區",
+      "api": "kwun-tong"
+    },
+    {
+      "name": "鑽石山",
+      "api": "diamond-hill"
+    }
+  ]
+}
