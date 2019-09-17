@@ -1,0 +1,17 @@
+{
+  "db": {
+    "host": "",
+    "name": "",
+    "user": "",
+    "password": "",
+    "showSQL": true
+  },
+  "log": {
+    "logFile": "",
+    "saveType": "d",
+    "traceLevel": 2
+  },
+  "system": {
+    "debug": true
+  }
+}
