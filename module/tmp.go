@@ -7,11 +7,11 @@ import (
 )
 
 func analyze11(doc *goquery.Document) {
-	var foods []model.FoodData
+	var foods []model.Deliveroo
 	doc.Find("#__next ul[class*=HomeFeedGrid-] li[class*=HomeFeedGrid-]").Each(func(i int, s *goquery.Selection) {
 		if i >= 2 {
 			fmt.Println("----------------------", i)
-			var food model.FoodData
+			var food model.Deliveroo
 			food.FoodType = ","
 			foodAnalyze(s, &food)
 			fmt.Println("数据:", food)
@@ -24,7 +24,7 @@ func analyze11(doc *goquery.Document) {
 /*
 商家分析
  */
-func foodAnalyze (s *goquery.Selection, food *model.FoodData) {
+func foodAnalyze (s *goquery.Selection, food *model.Deliveroo) {
 	l := s.Find("li[class*=HomeFeedUICard-]").Length()
 	if l == 0 {
 		d, _ := s.Html()
@@ -56,10 +56,10 @@ func foodAnalyze (s *goquery.Selection, food *model.FoodData) {
 	})
 }
 
-func activityAnalyze(s *goquery.Selection, foods *[]model.FoodData)  {
+func activityAnalyze(s *goquery.Selection, foods *[]model.Deliveroo)  {
 	s.Find("ul[class*=Carousel-] li[class*=Slide-]").Each(func(j int, cs *goquery.Selection) {
 		fmt.Println("----------------------", j)
-		var food model.FoodData
+		var food model.Deliveroo
 		food.FoodType = ","
 
 		foodAnalyze(cs, &food)

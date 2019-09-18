@@ -11,3 +11,4 @@ test.php
 .php_cs.cache
 .phpstorm.meta.php
 main
+config.json

@@ -18,5 +18,6 @@ func OpenDb() (err error) {
 	if err != nil {
 		return err
 	}
+	defer DB.Close()
 	return err
 }
