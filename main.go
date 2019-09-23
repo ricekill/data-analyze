@@ -10,6 +10,7 @@ import (
 func main()  {
 	//Load Config
 	common.CheckErr(common.LoadConfig())
+	common.CheckErr(common.SetupLogger())
 	common.CheckErr(common.OpenDb())
 
 	fmt.Println("开始:", time.Now().Unix())

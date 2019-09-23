@@ -12,3 +12,4 @@ test.php
 .phpstorm.meta.php
 main
 config.json
+/logs/*

@@ -7,8 +7,6 @@ func Start()  {
 	//戶戶送
 	//DeliverooStart()
 	//foodpanda
-	//FoodpandaStart()
-
-	detailStart()
+	Fd.FoodpandaStart()
 }
 
