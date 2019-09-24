@@ -5,7 +5,7 @@ package module
 //解析数据
 func Start()  {
 	//戶戶送
-	//DeliverooStart()
+	DeliverooStart()
 	//foodpanda
 	Fd.FoodpandaStart()
 }
