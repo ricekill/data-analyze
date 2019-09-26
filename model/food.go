@@ -20,5 +20,6 @@ type Foodpanda struct {
 	Latitude   string  `json:"latitude"`
 	Longitude  string  `json:"longitude"`
 	Banner     string  `json:"banner"`
+	Img        string  `json:"img"`
 	CreatedAt  int64   `json:"created_at"`
 }

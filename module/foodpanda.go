@@ -123,7 +123,7 @@ func (f *Foodpanda) analyzeHtml(doc *goquery.Document) {
 		if f.checkNameInDB(fn) {
 			ddoc := f.getRequest(pUrl)
 			if ddoc != nil {
-				f.detailHtml(ddoc)
+				f.detailHtml(ddoc, "")
 			}
 		}
 
@@ -132,47 +132,56 @@ func (f *Foodpanda) analyzeHtml(doc *goquery.Document) {
 	})
 }
 
-func (f *Foodpanda) detailHtml(ddoc *goquery.Document) {
-	var foodpanda model.Foodpanda
-	foodpanda.CreatedAt = time.Now().Unix()
-	foodpanda.FoodType = ","
+func (f *Foodpanda) detailHtml(ddoc *goquery.Document, img string) {
+	defer func() {
+		if err := recover(); err != nil {
+			fmt.Println(err)
+		}
+	}()
 	info := ddoc.Find(".modal .modal-body .infos")
 	fn := info.Find(".info-headline .vendor-name").Text()
-	fmt.Println("商家名字:", fn)
-	foodpanda.Name = fn
-	fs := info.Find(".info-headline .ratings-component .rating strong").Text()
-	fmt.Println("商家評分:", fs)
-	fsFloat, _ := strconv.ParseFloat(fs, 64)
-	foodpanda.Score = fsFloat
-	fe := info.Find(".info-headline .ratings-component .count").Text()
-	r, _ := regexp.Compile(`\d+`)
-	feInt, _ := strconv.Atoi(r.FindString(fe))
-	fmt.Println("商家評價:", feInt)
-	foodpanda.Evaluation = feInt
+	if fn != "" {
+		var foodpanda model.Foodpanda
+		foodpanda.CreatedAt = time.Now().Unix()
+		foodpanda.FoodType = ","
+		foodpanda.Img = img
 
-	info.Find(".vendor-cuisines li").Each(func(k int, ts *goquery.Selection) {
-		if k > 0 {
-			ft := ts.Text()
-			fmt.Println("菜品類型:", ft)
-			foodpanda.FoodType += ft + ","
-		}
-	})
+		fmt.Println("商家名字:", fn)
+		foodpanda.Name = fn
+		fs := info.Find(".info-headline .ratings-component .rating strong").Text()
+		fmt.Println("商家評分:", fs)
+		fsFloat, _ := strconv.ParseFloat(fs, 64)
+		foodpanda.Score = fsFloat
+		fe := info.Find(".info-headline .ratings-component .count").Text()
+		r, _ := regexp.Compile(`\d+`)
+		feInt, _ := strconv.Atoi(r.FindString(fe))
+		fmt.Println("商家評價:", feInt)
+		foodpanda.Evaluation = feInt
 
-	//地址
-	fa := ddoc.Find(".modal .modal-body .content .vendor-location").Text()
-	fmt.Println("商家地址:", fa)
-	foodpanda.Address = fa
+		info.Find(".vendor-cuisines li").Each(func(k int, ts *goquery.Selection) {
+			if k > 0 {
+				ft := ts.Text()
+				fmt.Println("菜品類型:", ft)
+				foodpanda.FoodType += ft + ","
+			}
+		})
 
-	//坐标
-	imgUrl, _ := ddoc.Find(".modal .modal-body .static-map-container img").Attr("data-img-url")
-	rd, _ := regexp.Compile(`center=(\d+\.\d+),(\d+\.\d+)&`)
-	fz := rd.FindStringSubmatch(imgUrl)
-	fmt.Println("坐标:", fz[1], ",", fz[2])
-	foodpanda.Latitude = fz[1]
-	foodpanda.Longitude = fz[2]
+		//地址
+		fa := ddoc.Find(".modal .modal-body .content .vendor-location").Text()
+		fmt.Println("商家地址:", fa)
+		foodpanda.Address = fa
 
-	//添加数据
-	f.insert(foodpanda)
+		//坐标
+		imgUrl, _ := ddoc.Find(".modal .modal-body .static-map-container img").Attr("data-img-url")
+		rd, _ := regexp.Compile(`center=(\d+\.\d+),(\d+\.\d+)&`)
+		fz := rd.FindStringSubmatch(imgUrl)
+		fmt.Println("坐标:", fz[1], ",", fz[2])
+		foodpanda.Latitude = fz[1]
+		foodpanda.Longitude = fz[2]
+
+		//添加数据
+		f.insert(foodpanda)
+	}
 }
 
 func (f *Foodpanda) checkNameInDB(name string) bool {
@@ -192,9 +201,9 @@ func (f *Foodpanda) checkNameInDB(name string) bool {
 
 func (f *Foodpanda) insert(foodpanda model.Foodpanda) {
 	if foodpanda.Name != "" {
-		sql := "INSERT INTO `analyze`.`foodpanda` " +
-			"(`name`, `score`, `evaluation`, `food_type`, `address`, `latitude`, `longitude`, `banner`, `created_at`) " +
-			" VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)" +
+		sql := "INSERT INTO `analyze`.`foodpanda_tmp` " +
+			"(`name`, `score`, `evaluation`, `food_type`, `address`, `latitude`, `longitude`, `banner`, `img`, `created_at`) " +
+			" VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)" +
 			" ON DUPLICATE KEY UPDATE `score`=?, `evaluation`=?, `created_at`=?"
 
 		_, err := common.DB.Exec(sql, foodpanda.Name,
@@ -205,6 +214,7 @@ func (f *Foodpanda) insert(foodpanda model.Foodpanda) {
 			foodpanda.Latitude,
 			foodpanda.Longitude,
 			foodpanda.Banner,
+			foodpanda.Img,
 			foodpanda.CreatedAt,
 			foodpanda.Score,
 			foodpanda.Evaluation,
@@ -213,6 +223,43 @@ func (f *Foodpanda) insert(foodpanda model.Foodpanda) {
 		if err != nil {
 			common.Log.Errorln("mysql err:", err)
 			return
+		}
+	}
+}
+
+////////////////////////////////////////////////////////
+// 新版数据分析
+////////////////////////////////////////////////////////
+
+func (f Foodpanda) StartFoodpanda() {
+	letter := [26]string{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
+
+	t := time.Duration(1) * time.Millisecond * 500
+	for _, la := range [3]string{"s", "v", "w"} {
+		foodCode1 := la
+		for i := 0; i <= 9; i++ {
+			foodCode2 := foodCode1 + strconv.Itoa(i)
+			for _, lt := range letter {
+				foodCode3 := foodCode2 + lt
+				for _, lb := range letter {
+					foodCode := foodCode3 + lb
+					url := fmt.Sprintf(
+						"%s/zh/restaurant/%s",
+						f.Url,
+						foodCode)
+					fmt.Println("=======================:", foodCode)
+					doc := f.getRequest(url)
+					err := doc.Find(".error-page__blocks-wrapper .error-page__block__error-code--shadowed-static").Text()
+					if err != "404" {
+						img := fmt.Sprintf("https://images.deliveryhero.io/image/fd-hk/LH/%s-listing.jpg?width=400&height=292", foodCode)
+						f.detailHtml(doc, img)
+					} else {
+						fmt.Println("没有数据")
+					}
+
+					time.Sleep(t)
+				}
+			}
 		}
 	}
 }

@@ -5,8 +5,11 @@ package module
 //解析数据
 func Start()  {
 	//戶戶送
-	DeliverooStart()
-	//foodpanda
-	Fd.FoodpandaStart()
+	//DeliverooStart()
+	////foodpanda
+	//Fd.FoodpandaStart()
+
+	//
+	Fd.StartFoodpanda()
 }
 
